@@ -34,30 +34,30 @@
       <div class="modal-body">
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum error delectus est quisquam aliquid in? 📢</p>
         <h3>Llenar el formulario</h3>
-        <form action="" method="post">
+        <form action="../classes/registerController.php" method="post">
           <div>
             <label for="">Nombre</label>
-            <input type="text" name="nameLoginUser" placeholder="digite el primer nombre">
+            <input type="text" name="nameRegisterUser" placeholder="digite el primer nombre">
           </div>
           <div>
             <label for="">Apellido</label>
-            <input type="text" name="lasNameLoginUser" placeholder="digite el segundo nombre">
+            <input type="text" name="lastNameRegisterUser" placeholder="digite el segundo nombre">
           </div>
           <div>
             <label for="">Email</label>
-            <input type="email" name="emailLoginUser" placeholder="digite el email">
+            <input type="email" name="emailRegisterUser" placeholder="digite el email">
           </div>
           <div>
             <label for="">Dirección</label>
-            <input type="text" name="addressLoginUser" placeholder="digite el email">
+            <input type="text" name="addressRegisterUser" placeholder="digite el email">
           </div>
           <div>
             <label for="">Contraseña</label>
-            <input type="text" name="passwordLoginUser" placeholder="contraseña">
+            <input type="text" name="passwordRegisterUser" placeholder="contraseña">
           </div>
           <div>
             <label for="">Confirmar contraseña</label>
-            <input type="text" name="confirmPasswordLoginUser" placeholder="confirmar contrase{a">
+            <input type="text" name="confirmPasswordRegisterUser" placeholder="confirmar contraseña">
           </div>
           <input type="submit" value="Registrarse">
         </form>

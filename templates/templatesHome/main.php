@@ -28,7 +28,7 @@
                 <div class="btn-profile-hover">
                   <ul>
                     <li>Perfil</li>
-                    <li><a href="../classes/logout.php">Cerrar sesión</a></li>
+                    <a href="../classes/logout.php"><li>Cerrar sesión</li></a>
                   </ul>
                 </div>
               </div>

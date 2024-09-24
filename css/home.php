@@ -113,7 +113,7 @@
   .header-navigator ul li .btn-profile-hover ul li:hover{
     background-color: rgba(116, 115, 115);
   }
-  .header-navigator ul li .btn-profile-hover ul li a{
+  .header-navigator ul li .btn-profile-hover ul a{
     color: white ;
   }
   /* HEADER */
