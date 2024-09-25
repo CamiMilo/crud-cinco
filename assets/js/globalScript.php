@@ -14,4 +14,20 @@
     getModal.firstElementChild.classList.remove('show')
   }
   // MODAL CONFIG ---------------------------------------------------------
+
+  // FUNCTIONS
+  const validateDoubleKeySpace = (value) => {
+    let arrayValue = []
+    for(index of value){
+      arrayValue.push(value)  
+    }
+    for(let i = 0; i < arrayValue[0].length; i++){
+      if(arrayValue[0][i - 1] == " "){
+        if(arrayValue[0][i] == " "){
+          return true
+        }
+      }
+    }
+    return false
+  }
 </script>

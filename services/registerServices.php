@@ -17,20 +17,22 @@
       echo $addressRegisterUser.'<br>';
       echo $passwordRegisterUser.'<br>';
       echo $confirmPasswordRegisterUser.'<br>';
+
+
+      // $sql = "INSERT INTO `tdb_users`(`fdb_name`, `fdb_last_name`, `fdb_email`, `fdb_address`, `fdb_password`) VALUES (:nameRegisterUser,:lastNameRegisterUser,:emailRegisterUser,:addressRegisterUser,:confirmPasswordRegisterUser)";
+      // $stmt = $connect->prepare($sql);
   
-      $sql = "INSERT INTO `tdb_users`(`fdb_name`, `fdb_last_name`, `fdb_email`, `fdb_address`, `fdb_password`) VALUES (:nameRegisterUser,:lastNameRegisterUser,:emailRegisterUser,:addressRegisterUser,:confirmPasswordRegisterUser)";
-      $stmt = $connect->prepare($sql);
+      // $stmt->bindParam(':nameRegisterUser',$nameRegisterUser);
+      // $stmt->bindParam(':lastNameRegisterUser',$lastNameRegisterUser);
+      // $stmt->bindParam(':emailRegisterUser',$emailRegisterUser);
+      // $stmt->bindParam(':addressRegisterUser',$addressRegisterUser);
+      // $stmt->bindParam(':confirmPasswordRegisterUser',$confirmPasswordRegisterUser);
   
-      $stmt->bindParam(':nameRegisterUser',$nameRegisterUser);
-      $stmt->bindParam(':lastNameRegisterUser',$lastNameRegisterUser);
-      $stmt->bindParam(':emailRegisterUser',$emailRegisterUser);
-      $stmt->bindParam(':addressRegisterUser',$addressRegisterUser);
-      $stmt->bindParam(':confirmPasswordRegisterUser',$confirmPasswordRegisterUser);
-  
-      $stmt->execute(); 
+      // $stmt->execute(); 
+
 
       $result_registration = 'true';
-      header("Location: ../views/login.php?resultRegistration=". urlencode($result_registration));
+      // header("Location: ../views/login.php?resultRegistration=". urlencode($result_registration));
     }catch(PDOException $error) {
       $result_registration = 'false';
       header("Location: ../views/login.php?resultRegistration=". urlencode($result_registration));

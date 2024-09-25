@@ -1,7 +1,7 @@
 <style>
   <?php
     // GLOBAL
-    require '../css/global.php';
+    require '../assets/css/globalStyle.php';
   ?>
 
   body{
@@ -96,5 +96,14 @@
     cursor: pointer;
   }
   /* ALERT ERROR */
+
+  /* ERROR CONTAINER TO REGISTER USER */
+  .invalid-feedback{
+    margin-bottom: 10px;
+    color: rgba(236, 90, 90);
+  }
+  input.error{
+    border-bottom:1px solid  rgba(236, 90, 90);
+  }
+  /* ERROR CONTAINER TO REGISTER USER */
 </style>
-</head>

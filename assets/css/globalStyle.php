@@ -61,6 +61,7 @@
     visibility: hidden;
     transition: all .2s ease-in;
     opacity: 0;
+    overflow: auto;
   }
   .modal.show{
     visibility: visible;
@@ -99,4 +100,24 @@
     padding: 0 15px;
   }
   /* MODAL */
+
+  /* PASSWORD INPUT */
+  .password-container{
+    position: relative;
+  }
+  .password-container span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 7px;
+    /* border: 1px solid rgb(212, 210, 210); */
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    color: var(--text-secondary);
+  }
+  .password-container span:hover{
+    background-color: rgb(212, 210, 210, 0.5);
+  }
+  /* PASSWORD INPUT */
   /* GLOBAL */
