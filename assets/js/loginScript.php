@@ -21,17 +21,36 @@
 
 
     // EEROR ALER
-    const btnCloseAlertError = document.getElementById('btn-clse-alert-error')
+    const btnCloseAlertError = document.querySelectorAll('.btn-close-alert-error')
     if(btnCloseAlertError){
-      btnCloseAlertError.addEventListener('click', e => {
-        document.querySelector('.alert-error').classList.remove('show')
-        const getUrl = new URL(window.location.href)
-        getUrl.searchParams.delete('result')
-        getUrl.searchParams.delete('error_msg')
-        window.location.href = getUrl
+      btnCloseAlertError.forEach((f) => {
+        f.addEventListener('click', e => {
+          e.target.parentElement.classList.remove('show')
+          console.log(e.target.parentElement)
+          const getUrl = new URL(window.location.href)
+          getUrl.searchParams.delete('result')
+          getUrl.searchParams.delete('error_msg')
+          window.location.href = getUrl
+        })
       })
     }
     // EEROR ALER
+
+    // SUCCESS ALER
+    const btnSuccessAlert = document.querySelectorAll('.btn-close-alert-success')
+    if(btnSuccessAlert){
+      btnSuccessAlert.forEach((f) => {
+        f.addEventListener('click', e => {
+          e.target.parentElement.classList.remove('show')
+          console.log(e.target.parentElement)
+          const getUrl = new URL(window.location.href)
+          getUrl.searchParams.delete('result')
+          getUrl.searchParams.delete('result_msg')
+          window.location.href = getUrl
+        })
+      })
+    }
+    // SUCCESS ALER
 
     // btnCloseAlertError.previousElementSibling
 

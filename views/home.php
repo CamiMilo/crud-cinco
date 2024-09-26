@@ -1,16 +1,78 @@
 <?php
 // IMPORT FUNCTIONS
-require_once '../classes/home.php';
-
-// HEAD
-require '../templates/templatesHome/head.php';
-// STYLES
-require '../css/home.php';
-
-// MAIN
-require '../templates/templatesHome/main.php';
-
-// SCRIPT
-require '../js/global.php';
-require '../js/home.php';
+require_once '../services/homeServices.php';
 ?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <!-- STYLES -->
+  <?php 
+    require '../assets/css/homeStyle.php';
+  ?>
+</head>
+
+<body>
+  <!-- ASIDE -->
+  <aside class="aside-navigation">
+    <div>
+      <div class="aside-logo">
+        <a href="../views/login.php"><span>LOGO</span></a>
+      </div>
+      <ul>
+        <li>Home</li>
+        <li>Usuarios</li>
+      </ul>
+    </div>
+  </aside>
+  <!-- ASIDE -->
+
+  <!-- MAIN -->
+  <div class="main">
+    <!-- HEADER -->
+    <header class="header-navigator">
+      <nav>
+        <div class="con">
+          <ul>
+            <li>
+              <input type="search" placeholder="Buscar...">
+            </li>
+            <li>
+              <div class="btn-profile">C
+                <div class="btn-profile-hover">
+                  <ul>
+                    <li>Perfil</li>
+                    <a href="../Services/logoutServices.php"><li>Cerrar sesión</li></a>
+                  </ul>
+                </div>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER -->
+
+    <div class="con">
+      <div class="main-body">
+        <h1>Bienvenido al home, <?php echo $user_data['fdb_name'] ." ". $user_data['fdb_last_name']; ?> 🎇💣</h1>
+
+      </div>
+    </div>
+    
+  </div>  
+  <!-- MAIN -->
+
+  <!-- SRIPTS -->
+  <?php 
+    require '../assets/js/globalScript.php';
+    require '../assets/js/homeScript.php';
+  ?>
+  <!-- SRIPTS -->
+</body>
+</html>

@@ -1,7 +1,7 @@
 <style>
   <?php
     // GLOBAL
-    require '../css/global.php';
+    require '../assets/css/globalStyle.php';
   ?>
 
   body{

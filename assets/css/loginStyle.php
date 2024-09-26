@@ -30,34 +30,6 @@
     text-align: center;
     padding: 10px;
   }
-  .card-login form input{
-    display: block;
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 15px;
-    border: none;
-    border-bottom: 2px solid gray;
-  }
-  .card-login form input:hover{
-    border-color: rgb(52, 52, 216);
-  }
-  .card-login form input:focus{
-    border: none;
-    outline: none;
-    border-bottom: 2px solid green ;
-  }
-  .card-login form input[type='submit']{
-    background-color: var(--color-main);
-    color: white;
-    border: none;
-    outline: none;
-    transition: all .3s ease-in-out;
-    cursor: pointer;
-  }
-  .card-login form input[type='submit']:hover{
-    opacity: 7;
-    transform: scale(0.98,0.98);
-  }
   .s-seconday{
     display: block;
     text-align: center;
@@ -79,6 +51,7 @@
   }
   /* CARD REGISTRATION */
 
+
   /* ALERT ERROR */
   .alert-error{
     padding: 10px;
@@ -90,20 +63,41 @@
   .alert-error.show{
     display: flex;
   }
+  .alert-error span:first-child{
+    flex: 95%;
+    display: flex;
+    align-items: center;
+  }
   .alert-error span:last-child{
     font-size: 30px;
     color: black;
     cursor: pointer;
+    flex: 5%;
   }
   /* ALERT ERROR */
 
-  /* ERROR CONTAINER TO REGISTER USER */
-  .invalid-feedback{
+
+  /* ALERT SUCCESS */
+  .alert-success{
+    padding: 10px;
+    background-color: rgb(160, 209, 115);
     margin-bottom: 10px;
-    color: rgba(236, 90, 90);
+    justify-content: center;
+    display: none;
   }
-  input.error{
-    border-bottom:1px solid  rgba(236, 90, 90);
+  .alert-success.show{
+    display: flex;
   }
-  /* ERROR CONTAINER TO REGISTER USER */
+  .alert-error span:first-child{
+    flex: 95%;
+    display: flex;
+    align-items: center;
+  }
+  .alert-success span:last-child{
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    flex: 5%;
+  }
+  /* ALERT SUCCESS */
 </style>

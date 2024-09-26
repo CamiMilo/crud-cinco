@@ -23,9 +23,9 @@
     display: block;
     padding: 10px;
     width: 100%;
-    margin-bottom: 15px;
     border: none;
     border-bottom: 2px solid gray;
+    z-index: 4;
   }
   input:hover{
     border-color: rgb(52, 52, 216);
@@ -42,6 +42,7 @@
     outline: none;
     transition: all .3s ease-in-out;
     cursor: pointer;
+    margin-bottom: 10px;
   }
   input[type='submit']:hover{
     opacity: 7;
@@ -75,6 +76,7 @@
     opacity: 0;
     transition: all .2s ease-in;
     transform: scale(0.8,0.8);
+    margin: 100px;
   } 
   .modal .modal-content.show{
     transform: translateY(0);
@@ -120,4 +122,37 @@
     background-color: rgb(212, 210, 210, 0.5);
   }
   /* PASSWORD INPUT */
+
+  /* LABEL BY INPUT */
+  .input-control{
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .input-control label {
+    position: absolute;
+    top: 10px;
+    left: 1%;
+    transition: all .2s ease-in-out;
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
+  .input-control label.active{
+    top: -10px;
+    left: 0;
+    color: green;
+  }
+  .input-control label.error{
+    color: rgba(236, 90, 90);
+  }
+  /* LABEL BY INPUT */
+
+  /* ERROR CONTAINER TO REGISTER USER */
+  .invalid-feedback{
+    margin-top: 5px;
+    color: rgba(236, 90, 90);
+  }
+  input.error{
+    border-bottom:1px solid  rgba(236, 90, 90);
+  }
+  /* ERROR CONTAINER TO REGISTER USER */
   /* GLOBAL */

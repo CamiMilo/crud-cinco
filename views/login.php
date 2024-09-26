@@ -23,19 +23,24 @@
 <body>
   <!-- CARD LOGIN -->
   <div class="card-login">
-    <?php if(isset($_GET['result'])) { ?>
-    <div class="alert-error show"><span><?php echo $_GET['error_msg']; ?></span><span id="btn-clse-alert-error">&times;</span></div>
+    <!-- ALERT ERROR -->
+    <?php if(isset($_GET['result']) && $_GET['result'] == 'false') { ?>
+    <div class="alert-error show"><span><?php echo $_GET['error_msg']; ?></span><span class="btn-close-alert-error">&times;</span></div>
+    <?php } ?>
+    <!-- ALERT SUCCESS -->
+    <?php if(isset($_GET['result']) && $_GET['result'] == 'true') { ?>
+    <div class="alert-success show"><span><?php echo $_GET['result_msg']; ?></span><span class="btn-close-alert-success">&times;</span></div>
     <?php } ?>
     <h1>Iniciar sesión</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dicta. 🎉✨</p>
     <form action="../services/loginServices.php" method="post">
-      <div>
-        <label for="">email</label>
-        <input type="email" name="emailLoginUser" placeholder="digite el email">
+      <div class="input-control">
+        <label for="emailLoginUser">email</label>
+        <input type="email" name="emailLoginUser" id="emailLoginUser">
       </div>
-      <div>
-        <label for="">contraseña</label>
-        <input type="text" name="passwordLoginUser" placeholder="digite la contraseña">
+      <div class="input-control">
+        <label for="passwordLoginUser">contraseña</label>
+        <input type="text" name="passwordLoginUser" id="passwordLoginUser">
       </div>
       <input type="submit" value="Ingresar">
     </form>
@@ -56,39 +61,39 @@
       <div class="modal-body">
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum error delectus est quisquam aliquid in? 📢</p>
         <h3>Llenar el formulario</h3>
-        <form action="../classes/registerController.php" method="post" id="formRegisterUser">
-          <div>
-            <label for="">Nombre</label>
-            <input type="text" name="nameRegisterUser" id="nameRegisterUser" placeholder="Digite el primer nombre">
+        <form action="../services/registerServices.php" method="post" id="formRegisterUser">
+          <div class="input-control">
+              <label for="nameRegisterUser">Nombre completo</label>
+              <input type="text" name="nameRegisterUser" id="nameRegisterUser">
             <div class="invalid-feedback" id="nameRegisterUserError"></div>
           </div>
-          <div>
-            <label for="">Apellido</label>
-            <input type="text" name="lastNameRegisterUser" id="lastNameRegisterUser" placeholder="Digite el segundo nombre">
+          <div class="input-control">
+            <label for="lastNameRegisterUser">Apellido completo</label>
+            <input type="text" name="lastNameRegisterUser" id="lastNameRegisterUser">
             <div class="invalid-feedback" id="lastNameRegisterUserError"></div>
           </div>
-          <div>
-            <label for="">Email</label>
-            <input type="text" name="emailRegisterUser" id="emailRegisterUser" placeholder="Digite el email">
+          <div class="input-control">
+            <label for="emailRegisterUser">Email</label>
+            <input type="text" name="emailRegisterUser" id="emailRegisterUser">
             <div class="invalid-feedback" id="emailRegisterUserError"></div>
           </div>
-          <div>
-            <label for="">Dirección</label>
-            <input type="text" name="addressRegisterUser" id="addressRegisterUser" placeholder="Digite el email">
+          <div class="input-control">
+            <label for="addressRegisterUser">Dirección</label>
+            <input type="text" name="addressRegisterUser" id="addressRegisterUser">
             <div class="invalid-feedback" id="addressRegisterUserError"></div>
           </div>
-          <div>
-            <label for="">Contraseña</label>
+          <div class="input-control">
             <div class="password-container">
-              <input type="password" name="passwordRegisterUser" id="passwordRegisterUser" placeholder="Contraseña">
+              <label for="passwordRegisterUser">Contraseña</label>
+              <input type="password" name="passwordRegisterUser" id="passwordRegisterUser">
               <span class="material-symbols-outlined">visibility</span>
             </div>
             <div class="invalid-feedback" id="passwordRegisterUserError"></div>
           </div>
-          <div>
-            <label for="">Confirmar contraseña</label>
+          <div class="input-control">
             <div class="password-container">
-              <input type="password" name="confirmPasswordRegisterUser" id="confirmPasswordRegisterUser" placeholder="Confirmar contraseña">
+              <label for="confirmPasswordRegisterUser">Confirmar contraseña</label>
+              <input type="password" name="confirmPasswordRegisterUser" id="confirmPasswordRegisterUser">
               <span class="material-symbols-outlined">visibility_off</span>
             </div>
             <div class="invalid-feedback" id="confirmPasswordRegisterUserError"></div>

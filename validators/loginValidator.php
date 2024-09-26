@@ -16,30 +16,37 @@
       if(value === ""){
         getContainerError.textContent = 'Error, el campo es requerido'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(String(value).length > 100){
         getContainerError.textContent = 'Error, el campo no debe exceder los 100 caracteres'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[0] === " "){
         getContainerError.textContent = 'Error, el campo no puede empezar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[String(value).length - 1] === " "){
         getContainerError.textContent = 'Error, el campo no puede terminar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s]+$/.test(value)){
         getContainerError.textContent = 'Error, el campo no puede contener caracteres especiales como %, @, $'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(validateDoubleKeySpace(value)){
         getContainerError.textContent = 'Error, el campo no puede contener dos espacios juntos'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else{
         getContainerError.textContent = ''
         getInput.classList.remove('error')
+        getInput.previousElementSibling.classList.remove('error')
         return true
       }
     }
@@ -55,30 +62,37 @@
       if(value === ""){
         getContainerError.textContent = 'Error, el campo es requerido'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(String(value).length > 100){
         getContainerError.textContent = 'Error, el campo no debe exceder los 100 caracteres'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[0] === " "){
         getContainerError.textContent = 'Error, el campo no puede empezar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[String(value).length - 1] === " "){
         getContainerError.textContent = 'Error, el campo no puede terminar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s]+$/.test(value)){
         getContainerError.textContent = 'Error, el campo no puede contener caracteres especiales como %, @, $'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(validateDoubleKeySpace(value)){
         getContainerError.textContent = 'Error, el campo no puede contener dos espacios juntos'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else{
         getContainerError.textContent = ''
         getInput.classList.remove('error')
+        getInput.previousElementSibling.classList.remove('error')
         return true
       }
     }
@@ -101,30 +115,37 @@
       if(value === ""){
         getContainerError.textContent = 'Error, el campo es requerido'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(String(value).length > 200){
         getContainerError.textContent = 'Error, el campo no debe exceder los 200 caracteres'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[0] === " "){
         getContainerError.textContent = 'Error, el campo no puede empezar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[String(value).length - 1] === " "){
         getContainerError.textContent = 'Error, el campo no puede terminar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)){
         getContainerError.textContent = 'Error, el correo no es valido'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(emails.includes(value)){
         getContainerError.textContent = 'Error, el correo ya existe'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else{
         getContainerError.textContent = ''
         getInput.classList.remove('error')
+        getInput.previousElementSibling.classList.remove('error')
         return true
       }
     }
@@ -140,30 +161,37 @@
       if(value === ""){
         getContainerError.textContent = 'Error, el campo es requerido'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(String(value).length > 200){
         getContainerError.textContent = 'Error, el campo no debe exceder los 200 caracteres'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[0] === " "){
         getContainerError.textContent = 'Error, el campo no puede empezar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[String(value).length - 1] === " "){
         getContainerError.textContent = 'Error, el campo no puede terminar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s\-#]+$/.test(value)){
         getContainerError.textContent = 'Advertencia, solo se permiten los siguientes caracteres especiales: # y -'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(validateDoubleKeySpace(value)){
         getContainerError.textContent = 'Error, el campo no puede contener dos espacios juntos'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else{
         getContainerError.textContent = ''
         getInput.classList.remove('error')
+        getInput.previousElementSibling.classList.remove('error')
         return true
       }
     }
@@ -179,42 +207,52 @@
       if(value === ""){
         getContainerError.textContent = 'Error, el campo es requerido'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(String(value).length > 100){
         getContainerError.textContent = 'Error, el campo no debe exceder los 100 caracteres'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[0] === " "){
         getContainerError.textContent = 'Error, el campo no puede empezar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[String(value).length - 1] === " "){
         getContainerError.textContent = 'Error, el campo no puede terminar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/[a-z]/.test(value)){
         getContainerError.textContent = 'La contraseña debe tener al menos una letra minúscula'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/[A-Z]/.test(value)){
         getContainerError.textContent = 'La contraseña debe tener al menos una letra mayúscula'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/\d/.test(value)){
         getContainerError.textContent = 'La contraseña debe tener al menos un número'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/[@$!%*?&#]/.test(value)){
         getContainerError.textContent = 'La contraseña debe tener al menos un carácter especial (@, $, !, %, *, ?, &, #)'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(validateDoubleKeySpace(value)){
         getContainerError.textContent = 'Error, el campo no puede contener dos espacios juntos'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else{
         getContainerError.textContent = ''
         getInput.classList.remove('error')
+        getInput.previousElementSibling.classList.remove('error')
         return true
       }
     }
@@ -230,46 +268,57 @@
       if(value === ""){
         getContainerError.textContent = 'Error, el campo es requerido'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(String(value).length > 100){
         getContainerError.textContent = 'Error, el campo no debe exceder los 100 caracteres'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[0] === " "){
         getContainerError.textContent = 'Error, el campo no puede empezar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(value[String(value).length - 1] === " "){
         getContainerError.textContent = 'Error, el campo no puede terminar con espacios'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/[a-z]/.test(value)){
         getContainerError.textContent = 'La contraseña debe tener al menos una letra minúscula'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/[A-Z]/.test(value)){
         getContainerError.textContent = 'La contraseña debe tener al menos una letra mayúscula'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/\d/.test(value)){
         getContainerError.textContent = 'La contraseña debe tener al menos un número'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(!/[@$!%*?&#]/.test(value)){
         getContainerError.textContent = 'La contraseña debe tener al menos un carácter especial (@, $, !, %, *, ?, &, #)'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(validateDoubleKeySpace(value)){
         getContainerError.textContent = 'Error, el campo no puede contener dos espacios juntos'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else if(document.getElementById('passwordRegisterUser').value !== value){
         getContainerError.textContent = 'Error, La contraseña no coincide'
         getInput.classList.add('error')
+        getInput.previousElementSibling.classList.add('error')
         return false
       }else{
         getContainerError.textContent = ''
         getInput.classList.remove('error')
+        getInput.previousElementSibling.classList.remove('error')
         return true
       }
     }

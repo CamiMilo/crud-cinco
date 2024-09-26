@@ -1,4 +1,22 @@
 <script>
+  // FUNCTIONS
+  const validateDoubleKeySpace = (value) => {
+    let arrayValue = []
+    for(index of value){
+      arrayValue.push(value)  
+    }
+    for(let i = 0; i < arrayValue[0].length; i++){
+      if(arrayValue[0][i - 1] == " "){
+        if(arrayValue[0][i] == " "){
+          return true
+        }
+      }
+    }
+    return false
+  }
+  // FUNCTIONS
+
+
   // MODAL CONFIG ---------------------------------------------------------
   // SHOW MODAL
   const showModal = (modal) => {
@@ -15,19 +33,18 @@
   }
   // MODAL CONFIG ---------------------------------------------------------
 
-  // FUNCTIONS
-  const validateDoubleKeySpace = (value) => {
-    let arrayValue = []
-    for(index of value){
-      arrayValue.push(value)  
-    }
-    for(let i = 0; i < arrayValue[0].length; i++){
-      if(arrayValue[0][i - 1] == " "){
-        if(arrayValue[0][i] == " "){
-          return true
-        }
+
+  // INPUT CONTROL
+  const getAllInputs = document.querySelectorAll('input')
+  getAllInputs.forEach((e) => {
+    e.addEventListener('focus', e => {
+      e.target.previousElementSibling.classList.add('active')
+    })
+    e.addEventListener('blur', e => {
+      if(!e.target.value.length > 0){
+        e.target.previousElementSibling.classList.remove('active')
       }
-    }
-    return false
-  }
+    })
+  })
+  // INPUT CONTROL
 </script>
