@@ -50,7 +50,8 @@
   }
   /* INPUT */
 
-  /* MODAL */
+  /* 
+   */
   .modal{
     position: fixed;
     width: 100vw;

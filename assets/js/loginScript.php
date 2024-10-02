@@ -52,7 +52,6 @@
     }
     // SUCCESS ALER
 
-    // btnCloseAlertError.previousElementSibling
 
     // PASSWORD INPUT 
     const getAllMateriaSymbolsOutlined = document.querySelectorAll('.material-symbols-outlined')
@@ -80,5 +79,4 @@
       })
     })
     // PASSWORD INPUT 
-
 </script>

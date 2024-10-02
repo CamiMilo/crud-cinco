@@ -1,78 +1,41 @@
 <?php
-// IMPORT FUNCTIONS
-require_once '../services/homeServices.php';
+  // IMPORT SERVICES
+  require_once '../services/homeServices.php';
+  require_once '../services/globalServices.php';
+
+  // HEAD
+  renderView('../templates/head.php',$data_head);
+  // HEAD
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-
-  <!-- STYLES -->
-  <?php 
-    require '../assets/css/homeStyle.php';
-  ?>
-</head>
-
+<!-- MAIN -->
 <body>
   <!-- ASIDE -->
-  <aside class="aside-navigation">
-    <div>
-      <div class="aside-logo">
-        <a href="../views/login.php"><span>LOGO</span></a>
-      </div>
-      <ul>
-        <li>Home</li>
-        <li>Usuarios</li>
-      </ul>
-    </div>
-  </aside>
+  <?php renderView('../templates/aside.php') ?>
   <!-- ASIDE -->
 
   <!-- MAIN -->
   <div class="main">
-    <!-- HEADER -->
-    <header class="header-navigator">
-      <nav>
-        <div class="con">
-          <ul>
-            <li>
-              <input type="search" placeholder="Buscar...">
-            </li>
-            <li>
-              <div class="btn-profile">C
-                <div class="btn-profile-hover">
-                  <ul>
-                    <li>Perfil</li>
-                    <a href="../Services/logoutServices.php"><li>Cerrar sesión</li></a>
-                  </ul>
-                </div>
-              </div>
 
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+    <!-- HEADER -->
+    <?php renderView('../templates/header.php') ?>
     <!-- HEADER -->
 
+    <!-- CONTENT -->
     <div class="con">
       <div class="main-body">
         <h1>Bienvenido al home, <?php echo $user_data['fdb_name'] ." ". $user_data['fdb_last_name']; ?> 🎇💣</h1>
 
       </div>
     </div>
+    <!-- CONTENT -->
     
   </div>  
   <!-- MAIN -->
 
   <!-- SRIPTS -->
-  <?php 
-    require '../assets/js/globalScript.php';
-    require '../assets/js/homeScript.php';
-  ?>
+  <?php renderView('../templates/footer.php',$data_footer) ?>
   <!-- SRIPTS -->
 </body>
+<!-- MAIN -->
 </html>

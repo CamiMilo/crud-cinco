@@ -24,24 +24,26 @@
     $emailLoginUser = (isset($_POST['emailLoginUser'])) ? $_POST['emailLoginUser'] : "";
     $password = (isset($_POST['passwordLoginUser'])) ? $_POST['passwordLoginUser'] : "";
 
-    // VALIDATE
+    // VALIDATE USER
     $sql = "SELECT * FROM `tdb_users` WHERE fdb_email = :email AND fdb_password = :password";
     $sentence = $connect->prepare($sql);
-
     $sentence->bindParam(':email', $emailLoginUser);
     $sentence->bindParam(':password', $password);
     $sentence->execute();
     $get_user = $sentence->fetchAll(PDO::FETCH_ASSOC);
 
+    //  RETURN FALSE
     if(empty($get_user)){
       $result = 'false';
       $error_msg = 'Error, la contraseña o el email son incorrectos, por favor verifique';
       header('Location: ../views\login.php?result='. urlencode($result). '&error_msg='. urlencode($error_msg));
       exit();
-    }else{  
+    }
+    // RETURN TRUE
+    else{  
       session_start();
       foreach($get_user as $e) {
-          $_SESSION['user_data'] = $e;
+        $_SESSION['user_data'] = $e;
       }
       header('Location: ../views\home.php');
       exit();
